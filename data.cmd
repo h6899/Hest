@@ -68,13 +68,12 @@ goto kalkulator
 
 :kalkulator
 cls
-insertbmp /p:"back.bmp" /x:0 /y:0
+insertbmp /p:"back.bmp" /x:0 /y:560
 insertbmp /p:"back2.bmp" /x:0 /y:0
-insertbmp /p:"back2.bmp" /x:512 /y:0
 insertbmp /p:"line.bmp" /x:880 /y:0 /z:2660
 insertbmp /p:"line.bmp" /x:880 /y:160 /z:2660
-insertbmp /p:"line.bmp" /x:880 /y:160 /z:2660
 insertbmp /p:"line.bmp" /x:880 /y:320 /z:2660
+insertbmp /p:"gradient.bmp" /x:229 /y:624
 insertbmp /p:"line_a.bmp" /x:880 /y:480 /z:2660
 
 
@@ -172,7 +171,7 @@ if "%hest7%" == "8" insertbmp /p:"hest7.bmp" /x:640 /y:480
 if "%hest7%" == "9" insertbmp /p:"hest7.bmp" /x:720 /y:480
 if "%hest7%" == "10" goto h7
 
-Batbox /g 0 39 /c 0x2F /d "Du har valgt hest %v%"
+Batbox /g 0 39 /c 0x1F /d "Du har valgt hest %v%"
 Timeout /t 2 /nobreak >nul
 goto kalkulator
 
