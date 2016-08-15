@@ -64,15 +64,12 @@ goto start
 
 :v
 set /a penger-=1000
-goto kalkulator
+goto spill
 
-:kalkulator
+:spill
 cls
-insertbmp /p:"back.bmp" /x:0 /y:560
-insertbmp /p:"back2.bmp" /x:0 /y:0
+insertbmp /p:"texture.bmp" /x:0 /y:0
 insertbmp /p:"line.bmp" /x:880 /y:0 /z:2660
-insertbmp /p:"line.bmp" /x:880 /y:160 /z:2660
-insertbmp /p:"line.bmp" /x:880 /y:320 /z:2660
 insertbmp /p:"gradient.bmp" /x:0 /y:624
 %tall%
 
@@ -178,7 +175,7 @@ if "%hest7%" == "10" goto h7
 
 
 Timeout /t 2 /nobreak >nul
-goto kalkulator
+goto spill
 
 :h1
 color 07 & color 0F
