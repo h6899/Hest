@@ -52,13 +52,13 @@ echo 7. Hest 7
 echo 8. Avbryt
 echo.
 set /p start=Velg:
-if "%start%" == "1" set v=1 & set tall=insertbmp /p:"tall1.bmp" /x:125 /y:624 & goto v
-if "%start%" == "2" set v=2 & set tall=insertbmp /p:"tall2.bmp" /x:125 /y:624 & goto v
-if "%start%" == "3" set v=3 & set tall=insertbmp /p:"tall3.bmp" /x:125 /y:624 & goto v
-if "%start%" == "4" set v=4 & set tall=insertbmp /p:"tall4.bmp" /x:125 /y:624 & goto v
-if "%start%" == "5" set v=5 & set tall=insertbmp /p:"tall5.bmp" /x:125 /y:624 & goto v
-if "%start%" == "6" set v=6 & set tall=insertbmp /p:"tall6.bmp" /x:125 /y:624 & goto v
-if "%start%" == "7" set v=7 & set tall=insertbmp /p:"tall7.bmp" /x:125 /y:624 & goto v
+if "%start%" == "1" set v=1 & goto v
+if "%start%" == "2" set v=2 & goto v
+if "%start%" == "3" set v=3 & goto v
+if "%start%" == "4" set v=4 & goto v
+if "%start%" == "5" set v=5 & goto v
+if "%start%" == "6" set v=6 & goto v
+if "%start%" == "7" set v=7 & goto v
 if "%start%" == "8" goto meny
 goto start
 
@@ -70,8 +70,6 @@ goto spill
 cls
 insertbmp /p:"texture.bmp" /x:0 /y:0
 insertbmp /p:"line.bmp" /x:880 /y:0 /z:2660
-insertbmp /p:"gradient.bmp" /x:0 /y:624
-%tall%
 
 
 set /a hest=%random% %% 7 + 1
@@ -173,7 +171,7 @@ if "%hest7%" == "8" insertbmp /p:"hest7.bmp" /x:640 /y:480
 if "%hest7%" == "9" insertbmp /p:"hest7.bmp" /x:720 /y:480
 if "%hest7%" == "10" goto h7
 
-
+Batbox /g 0 39 /c 0x0F /d "Du har valgt hest: %v%"
 Timeout /t 2 /nobreak >nul
 goto spill
 
